@@ -15,9 +15,9 @@ body {
   paint-order: stroke fill;
 }
 
-.scene-hollikas {
-  --desktop-image: url('img/hollikas.png');
-  --mobile-image: url('img/hollikas-mobile.png');
+.scene-hawaii {
+  --desktop-image: url('img/Hawaii.png');
+  --mobile-image: url('img/Hawaii-mobile.png');
 }
 
 .island-body {
