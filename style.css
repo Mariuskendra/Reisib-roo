@@ -20,6 +20,21 @@ body {
   --mobile-image: url('img/hollikas-mobile.png');
 }
 
+.scene-juustusaar-koju {
+  --desktop-image: url('img/juustusaar-koju.png');
+  --mobile-image: url('img/juustusaar-koju-mobile.png');
+}
+
+.scene-juustusaar-kosmos {
+  --desktop-image: url('img/juustusaar-kosmos.png');
+  --mobile-image: url('img/juustusaar-kosmos-mobile.png');
+}
+
+.scene-juustusaar-surm {
+  --desktop-image: url('img/juustusaar-surm.png');
+  --mobile-image: url('img/juustusaar-surm-mobile.png');
+}
+
 .island-body {
   --active-image: var(--desktop-image);
   box-sizing: border-box;
