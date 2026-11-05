@@ -74,7 +74,7 @@ Failinimed on ettepanek, täpsustame koos.
 ├── saaremaa.html              tulemus: pettus
 ├── hawaii.html                tulemus: vulkaan
 ├── hollikas.html              tulemus: magasid sisse
-├── paradiis-ellus.html        tulemus: jäid ellu
+├── paradiis-elus.html        tulemus: jäid ellu
 ├── paradiis-surm.html         tulemus: surm
 ├── juustusaar-koju.html       tulemus: jõudsid tagasi
 ├── juustusaar-kosmos.html     tulemus: jäid kosmosesse
