@@ -1,28 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
 
-* {
-    box-sizing: border-box;
-}
-
-html,
-body {
-    min-height: 100%;
-    margin: 0;
+@font-face {
+  font-family: 'Ka Blam';
+  src: url('fonts/Ka Blam.ttf') format('truetype');
+  font-display: swap;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  text-align: center;
+  -webkit-text-stroke: 2px #010101;
+  paint-order: stroke fill;
+}
+.scene-hollikas {
+  --desktop-image: url('img/hollikas.png');
+  --mobile-image: url('img/hollikas-mobile.png');
 }
 
-.page {
-    position: relative;
-    min-height: 100vh;
-    margin: 0 3px;
-    background-color: #dfe7f5;
+.scene-juustusaar-koju {
+  --desktop-image: url('img/juustusaar-koju.png');
+  --mobile-image: url('img/juustusaar-koju-mobile.png');
+}
+
+.scene-juustusaar-kosmos {
+  --desktop-image: url('img/juustusaar-kosmos.png');
+  --mobile-image: url('img/juustusaar-kosmos-mobile.jpg');
+}
+
+.scene-paradiisisaar_dead {
+  --desktop-image: url('img/paradiisisaar_dead-mobile.png');
+  --mobile-image: url('img/paradiisisaar_dead-mobile.png');
+}
+.scene-juustusaar-surm {
+  --desktop-image: url('img/juustusaar-surm.png');
+  --mobile-image: url('img/juustusaar-surm-mobile.png');
+}
+
+.scene-paradiisisaar_dead {
+  --desktop-image: url('img/paradiisisaar_dead-mobile.png');
+  --mobile-image: url('img/paradiisisaar_dead-mobile.png');
+}
+.scene-paradiisisaar_alive {
+  --desktop-image: url('img/paradiisisaar_alive.avif');
+  --mobile-image: url('img/paradiisisaar_alive-mobile.avif');
+}
+
+.scene-kaleidoskoop {
+  --desktop-image: url('img/kaleidoskoop.avif');
+  --mobile-image: url('img/kaleidoskoop-mobile.aif');
+}
+.scene-paradiisisaar_dead {
+  --desktop-image: url('img/paradiisisaar_dead-mobile.avif');
+  --mobile-image: url('img/paradiisisaar_dead-mobile.avif');
+}
+.scene-hollikas {
+  --desktop-image: url('img/hollikas.avif');
+  --mobile-image: url('img/hollikas-mobile.avif');
+}
+.scene-hawaii {
+  --desktop-image: url('img/hawaii-desktop.avif');
+  --mobile-image: url('img/hawaii-mobile.avif');
+}
+
+.scene-scam {
+  --desktop-image: url('img/scam.avif');
+  --mobile-image: url('img/scam.avif');
+}
+
+.island-body {
+  --active-image: var(--desktop-image);
+  box-sizing: border-box;
+  min-height: 100svh;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+  background-color: #142635;
+  background-image: 
+    linear-gradient(to bottom, transparent 50%, #000 100%),
+    linear-gradient(to top, transparent 50%, rgba(0, 0, 0, 0.9) 100%),
+    var(--active-image);
+  background-size: cover;
+  background-position: center;
+}
+
+.island-container,
+.island-description {
+  grid-column: 2 / span 10;
+}
+
+.island-container {
+  --button-width: clamp(125px, 20vw, 270px);
+  display: grid;
+  grid-template-columns: var(--button-width) minmax(0, 1fr) var(--button-width);
+  gap: 12px;
+  align-items: center;
+}
+
+.island-title,
+.island-description {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.island-title {
+  grid-column: 2;
+  font-family: 'Ka Blam', sans-serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-text-stroke: 12px #010101;
+}
+
+.island-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.island-button:hover {
+  filter: brightness(1.1);
+}
+
+.island-description {
+  grid-row: 3;
+  padding-block: 20px;
+  font-size: clamp(1.125rem, 2.5vw, 2rem);
+  line-height: 1.4;
+  font-weight: 900;
+  -webkit-text-stroke: 6px #010101;
+}
+
+@media (max-width: 600px) {
+  .island-body {
+    --active-image: var(--mobile-image, var(--desktop-image));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .island-container,
+  .island-description {
+    grid-column: 1 / -1;
+  }
+
+  .island-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .island-button {
+    max-width: 360px;
+  }
+
+  .island-title {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+.backpack-body {
+  box-sizing: border-box;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 12px;
+  padding-top: clamp(16px, 2vw, 30px);
+  background: #5ea8d8 url('img/backpackBackground.webp') center / cover no-repeat;
+}
+
+.backpack-header {
+  position: relative;
+  padding-inline: 12px;
+  font-weight: 900;
+}
+
+.backpack-header h1 {
+  margin: 0;
+  font-size: clamp(24px, 4.5vw, 54px);
+  line-height: 1.1;
+  -webkit-text-stroke: 4px #010101;
+}
+
+.backpack-header p {
+  margin: 6px 0 0;
+  font-size: clamp(14px, 2vw, 24px);
+  -webkit-text-stroke: 3px #010101;
+}
+
+.backpack-next,
+.backpack-item {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.backpack-next {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  width: clamp(90px, 15vw, 165px);
+  padding: 0;
+}
+
+.backpack-next img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.backpack-main {
+  width: min(72%, 800px);
+  min-width: 0;
+  margin-inline: auto;
+  align-self: center;
+}
+
+.backpack-storage {
+  position: relative;
+  aspect-ratio: 11 / 5;
+}
+
+.backpack-storage-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.backpack-storage-slots,
+.backpack-container {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.backpack-storage-slots {
+  inset: 12% 6%;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  column-gap: 3%;
+  row-gap: 7%;
+}
+
+.backpack-storage-slots li,
+.backpack-container li {
+  min-width: 0;
+  min-height: 0;
+}
+
+.backpack-item {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 4px;
+  font: inherit;
+  color: #fff;
+  container-type: inline-size;
+}
+
+.backpack-item-name {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  font-size: clamp(10px, 9cqw, 14px);
+  font-weight: 900;
+  line-height: 1.2;
+  -webkit-text-stroke: 0.3em #000;
+}
+
+.backpack-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.backpack-hotbar {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  width: min(75%, 820px);
+  aspect-ratio: 3 / 1;
+  margin-inline: auto;
+  background: url('img/backpackHotbar.webp') center / 100% 100% no-repeat;
+}
+
+.backpack-container {
+  inset: 48% 12% 9%;
+  gap: 2%;
+}
+
+@media (max-width: 600px) {
+  .backpack-header {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  /* Enlarge the artwork inside the hotbar without widening the page. */
+  .backpack-hotbar {
+    width: 100%;
+    aspect-ratio: 13 / 5;
+    background-size: 115% 100%;
+  }
+
+  .backpack-container {
+    inset: 48% 6% 9%;
+  }
+
+  .backpack-next {
+    position: static;
+    order: -1;
+    width: 105px;
+    margin: 0 0 9px auto;
+  }
+
+  /* Rotate only the artwork; the item grid stays upright. */
+  .backpack-storage {
+    aspect-ratio: 5 / 11;
+  }
+
+  .backpack-storage-image {
+    top: 50%;
+    left: 50%;
+    width: 220%;
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .backpack-storage-slots {
+    inset: 6% 12%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    column-gap: 7%;
+    row-gap: 3%;
+  }
 }
+.wheel-body {
+  box-sizing: border-box;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 12px;
+  padding-top: clamp(16px, 2vw, 30px);
+  background: #5ea8d8 url('img/luckywheelBackground.webp') center / cover no-repeat;
+}
+
 
 .page-title {
     margin: 30px 0 0;
@@ -34,7 +361,7 @@ body {
 }
 
 .wheel-container {
-    --size: min(420px, 90vw);   /* everything scales from this */
+    --size: min(420px, 90vw);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -43,7 +370,7 @@ body {
     transform: translate(-50%, -50%);
 }
 
-/* Outer spinning wheel */
+
 .wheel {
     position: absolute;
     width: 100%;
@@ -62,7 +389,7 @@ body {
     transition: transform 5s cubic-bezier(0.15, 0.8, 0.15, 1);
 }
 
-/* Individual options */
+
 .option {
     position: absolute;
     width: 50%;
@@ -78,7 +405,7 @@ body {
     color: white;
 }
 
-/* Position the six option labels */
+
 .option-1 {
     transform: rotate(30deg);
 }
@@ -103,7 +430,7 @@ body {
     transform: rotate(330deg);
 }
 
-/* Center circle */
+
 .center-circle {
     position: absolute;
     width: 85px;
@@ -114,14 +441,14 @@ body {
     border-radius: 50%;
     border: 5px solid #dfe7f5;
     background-color: white;
-    color: black;
+    color: white;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     z-index: 5;
 }
 
-/* Fixed pointer */
+
 .pointer {
     position: absolute;
     top: -12px;
@@ -153,11 +480,11 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 50%;          /* center to edge */
+    width: 50%;       
     height: 0;
-    transform-origin: 0 50%;   /* rotate around the wheel's center */
+    transform-origin: 0 50%; 
     display: flex;
-    justify-content: flex-end; /* push text toward the rim */
+    justify-content: flex-end;
     align-items: center;
     padding-right: 18px;
     font-size: 16px;
@@ -177,11 +504,160 @@ body {
     font-weight: 600;
 }
 
-/* Slice centers are at 30°, 90°, 150°… measured from the top.
-   A strip pointing right is at 90°, so subtract 90°. */
+
 .option-1 { transform: rotate(-60deg); }
 .option-2 { transform: rotate(0deg); }
 .option-3 { transform: rotate(60deg); }
 .option-4 { transform: rotate(120deg); }
 .option-5 { transform: rotate(180deg); }
-.option-6 { transform: rotate(240deg); }
+.option-6 { transform: rotate(240deg); }.wheel-body {
+  box-sizing: border-box;
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 12px;
+  padding-top: clamp(16px, 2vw, 30px);
+  background: #030303 url('img/luckywheelBackground.webp') center / cover no-repeat;
+}
+
+
+.page-title {
+    margin: 30px 0 0;
+    padding: 0 2px;
+    background-color: white;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.wheel-container {
+    --size: min(420px, 90vw);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--size);
+    height: var(--size);
+    transform: translate(-50%, -50%);
+}
+
+
+.wheel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    container-type: inline-size;
+    border-radius: 50%;
+    outline: 3px solid #010101;
+    overflow: hidden;
+    background: conic-gradient(
+        #ff6b6b 0deg 60deg,
+        #ffd93d 60deg 120deg,
+        #6bcb77 120deg 180deg,
+        #4d96ff 180deg 240deg,
+        #9b5de5 240deg 300deg,
+        #f15bb5 300deg 360deg
+    );
+
+    transition: transform 5s cubic-bezier(0.15, 0.8, 0.15, 1);
+}
+
+
+.option {
+    position: absolute;
+    box-sizing: border-box;
+    width: 50%;
+    height: 0;
+    left: 50%;
+    top: 50%;
+    transform-origin: 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4% 0 18%;
+    font-size: clamp(9px, 3.8cqw, 16px);
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+}
+
+
+.option-1 {
+    transform: rotate(-60deg);
+}
+
+.option-2 {
+    transform: rotate(0deg);
+}
+
+.option-3 {
+    transform: rotate(60deg);
+}
+
+.option-4 {
+    transform: rotate(120deg);
+}
+
+.option-5 {
+    transform: rotate(180deg);
+}
+
+.option-6 {
+    transform: rotate(240deg);
+}
+
+
+.center-circle {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 5px solid #dfe7f5;
+    background-color: white;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 5;
+}
+
+
+.pointer {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 30px solid black;
+    z-index: 10;
+}
+
+.center-circle:hover {
+    background-color: #eeeeee;
+}
+
+.center-circle:disabled {
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .wheel-container {
+        width: min(300px, 80vw);
+        height: min(300px, 80vw);
+    }
+}
+.result {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
