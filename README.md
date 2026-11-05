@@ -1,4 +1,4 @@
-# [Teenuse nimi]
+# A-rühm kooliprojekt
 
 **Üksiku saare ellujäämisbüroo**: Kuressaare Ametikooli projekt "Salajane internet" (2026).
 
