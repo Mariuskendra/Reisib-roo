@@ -20,6 +20,22 @@ body {
   --mobile-image: url('img/Hawaii-mobile.png');
 }
 
+.scene-paradiisisaar_dead {
+  --desktop-image: url('img/paradiisisaar_dead-mobile.png');
+  --mobile-image: url('img/paradiisisaar_dead-mobile.png');
+}
+
+.scene-paradiisisaar_alive {
+  --desktop-image: url('img/paradiisisaar_alive.png');
+  --mobile-image: url('img/paradiisisaar_alive-mobile.png');
+}
+
+.scene-kaleidoskoop {
+  --desktop-image: url('img/kaleidoskoop.png');
+  --mobile-image: url('img/kaleidoskoop-mobile.png');
+}
+
+
 .island-body {
   --active-image: var(--desktop-image);
   box-sizing: border-box;
