@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+
+@font-face {
+  font-family: 'Ka Blam';
+  src: url('fonts/Ka Blam.ttf') format('truetype');
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  text-align: center;
+  -webkit-text-stroke: 2px #010101;
+  paint-order: stroke fill;
+}
+
+.scene-hollikas {
+  --desktop-image: url('img/hollikas.png');
+  --mobile-image: url('img/hollikas-mobile.png');
+}
+
+.island-body {
+  --active-image: var(--desktop-image);
+  box-sizing: border-box;
+  min-height: 100svh;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+  background-color: #142635;
+  background-image:
+    linear-gradient(to bottom, transparent 50%, #000 100%),
+    linear-gradient(to top, transparent 50%, rgba(0, 0, 0, 0.9) 100%),
+    var(--active-image);
+  background-size: cover;
+  background-position: center;
+}
+
+.island-container,
+.island-description {
+  grid-column: 2 / span 10;
+}
+
+.island-container {
+  --button-width: clamp(125px, 20vw, 270px);
+  display: grid;
+  grid-template-columns: var(--button-width) minmax(0, 1fr) var(--button-width);
+  gap: 12px;
+  align-items: center;
+}
+
+.island-title,
+.island-description {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.island-title {
+  grid-column: 2;
+  font-family: 'Ka Blam', sans-serif;
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  -webkit-text-stroke: 12px #010101;
+}
+
+.island-button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.island-button:hover {
+  filter: brightness(1.1);
+}
+
+.island-description {
+  grid-row: 3;
+  padding-block: 20px;
+  font-size: clamp(1.125rem, 2.5vw, 2rem);
+  line-height: 1.4;
+  font-weight: 900;
+  -webkit-text-stroke: 6px #010101;
+}
+
+@media (max-width: 600px) {
+  .island-body {
+    --active-image: var(--mobile-image, var(--desktop-image));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .island-container,
+  .island-description {
+    grid-column: 1 / -1;
+  }
+
+  .island-container {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .island-button {
+    max-width: 360px;
+  }
+
+  .island-title {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
