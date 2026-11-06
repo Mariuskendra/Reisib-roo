@@ -36,11 +36,18 @@ Pealkirjas on võidetud sihtkoht. Kasutaja valib riiulist seljakotti **kuni 5 es
 
 Valikus olevad esemed:
 
-| :--- | :--- | :--- |
-| veefilter | võrkkiik | kummipart |
-| wifi-ruuter | skafander (kosmoseülikond) | nuga |
-| kütusekanister | hiired | päikesepatareiga raadio |
-| vibu | raamat | päikeseprillid |
+| veefilter 
+| võrkkiik 
+| kummipart
+| wifi-ruuter 
+| skafander (kosmoseülikond) 
+| nuga
+| kütusekanister 
+| hiired 
+| päikesepatareiga raadio
+| vibu 
+| raamat 
+| päikeseprillid
 
 ### 3. Tulemus
 JavaScript kontrollib saart ja valitud esemeid ning avab sobiva tulemuslehe. Igal saarel on oma reeglid:
