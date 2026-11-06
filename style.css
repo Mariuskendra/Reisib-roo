@@ -49,7 +49,7 @@ body {
 
 .scene-kaleidoskoop {
   --desktop-image: url('img/kaleidoskoop.avif');
-  --mobile-image: url('img/kaleidoskoop-mobile.aif');
+  --mobile-image: url('img/kaleidoskoop-mobile.avif');
 }
 .scene-paradiisisaar_dead {
   --desktop-image: url('img/paradiisisaar_dead-mobile.avif');
