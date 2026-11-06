@@ -17,7 +17,7 @@ Palju õnne, sa võitsid reisi! Aga kuhu? Keeruta loosiratast, vaata, kuhu õnn 
 | Eliis Elenor Viin | TAK-26 | HTML, CSS |
 | Martin Rosing | TA-26 | HTML, CSS |
 
-Idee ja sisuga (tekstid, saarte lood, pildid ja nende optimeerimine) tegelevad kõik.
+Idee ja sisuga (tekstid, sihtkohtade lood, pildid ja nende optimeerimine) tegelevad kõik.
 
 ## Kuidas see töötab
 
@@ -66,7 +66,7 @@ Failinimed
 /
 ├── README.md                  projekti kirjeldus (see fail)
 ├── index.html                 1. vaade: loosiratas
-├── varustus.html              2. vaade: esemete valik
+├── backpack.html              2. vaade: esemete valik
 │
 ├── kaleidoskoop.html          tulemus: õnnelik lõpp
 ├── saaremaa.html              tulemus: pettus
@@ -78,8 +78,6 @@ Failinimed
 ├── juustusaar-kosmos.html     tulemus: jäid kosmosesse
 ├── juustusaar-surm.html       tulemus: surm
 │
-├── [mobiilivaate failid]      [täpsustada failinimed]
-│
 │── style.css                  kogu kujundus
 │
 │── app.js                     loosiratas, reeglid
@@ -87,10 +85,8 @@ Failinimed
 │── backpack.js                esemete valiku loogika
 │    
 ├── img/                       pildid (esemed, taustad)
-└── docs/
-    ├── ai-kasutamine.md       kus ja kuidas AI-d kasutasime
-    └── kontrollipaevik.md     kontrollid ja testid
-```
+├── PROMT.md                   kus ja kuidas AI-d kasutasime
+
 
 ## Kuidas avada
 
@@ -116,19 +112,16 @@ Veebiversioon: https://ta25.polluaar.itmajakas.ee/reisiloos/
 - [ ] Eseme saab seljakotist tagasi riiulile panna
 - [ ] Teade, kui valitakse üle 5 eseme või vajutatakse "Edasi" tühja seljakotiga
 - [ ] Reeglid avavad õige tulemuslehe
-- [ ] Abifunktsioon: [nt esemete filter otstarbe järgi]
 - [ ] "Proovi uuesti" igal tulemuslehel
 - [ ] Vau-hetk / easter egg: [mis]
 - [ ] Töötab telefonis ja arvutis
 
-## Materjalide allikad
 
-| Fail | Allikas |
-| :--- | :--- |
-| [img/...] | [link või "loodud AI-ga, tööriist X"] |
+## Figma 
+https://www.figma.com/design/ZylA3chvwZG03n8oqisUqG/Untitled?t=lE6x0eq9nWSw88PV-1
 
 ## Teadaolevad puudused
-- faili nimedes kasutatakse eesti keelt
+- Faili nimedes kasutatakse eesti keelt
 - Tegemist on prototüübiga 
 - Osad selgitavad tekstid on veel puudu
 - Praegune lahendusvarjantide vähesus tuleneb aja piirangust
