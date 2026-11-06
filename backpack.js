@@ -19,6 +19,19 @@ const islandTitle = document.querySelector(".island-title");
 
 if (island) {
   islandTitle.textContent = island;
+
+  if (island === "Hollikas") {
+    window.location.href = "hollikas.html"
+  }
+    if (island === "Hawai") {
+    window.location.href = "hawaii.html"
+  }
+      if (island === "saaremaa") {
+    window.location.href = "saaremaa.html"
+  }
+   if (island === "Kaleidoskoop") {
+    window.location.href = "kaleidoskoop.html"
+  }
 }
 
 function determineEnding(selectedIds) {

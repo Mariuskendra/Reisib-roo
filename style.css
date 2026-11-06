@@ -312,7 +312,7 @@ body {
   grid-template-rows: auto 1fr auto;
   gap: 12px;
   padding-top: clamp(16px, 2vw, 30px);
-  background: #5ea8d8 url('img/luckywheelBackground.webp') center / cover no-repeat;
+  background: #030303 url('img/luckywheelBackground.webp') center / cover no-repeat;
 }
 
 
@@ -340,7 +340,9 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
+    container-type: inline-size;
     border-radius: 50%;
+    outline: 3px solid #010101;
     overflow: hidden;
     background: conic-gradient(
         #ff6b6b 0deg 60deg,
@@ -357,42 +359,45 @@ body {
 
 .option {
     position: absolute;
+    box-sizing: border-box;
     width: 50%;
-    height: 50%;
+    height: 0;
     left: 50%;
-    top: 0;
-    transform-origin: bottom left;
+    top: 50%;
+    transform-origin: 0 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    padding: 0 4% 0 18%;
+    font-size: clamp(9px, 3.8cqw, 16px);
     font-weight: bold;
     color: white;
+    white-space: nowrap;
 }
 
 
 .option-1 {
-    transform: rotate(30deg);
+    transform: rotate(-60deg);
 }
 
 .option-2 {
-    transform: rotate(90deg);
+    transform: rotate(0deg);
 }
 
 .option-3 {
-    transform: rotate(150deg);
+    transform: rotate(60deg);
 }
 
 .option-4 {
-    transform: rotate(210deg);
+    transform: rotate(120deg);
 }
 
 .option-5 {
-    transform: rotate(270deg);
+    transform: rotate(180deg);
 }
 
 .option-6 {
-    transform: rotate(330deg);
+    transform: rotate(240deg);
 }
 
 
@@ -441,23 +446,6 @@ body {
         height: min(300px, 80vw);
     }
 }
-.option {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50%;       
-    height: 0;
-    transform-origin: 0 50%; 
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 18px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    white-space: nowrap;
-}
-
 .result {
     position: absolute;
     bottom: 40px;
@@ -470,9 +458,3 @@ body {
 }
 
 
-.option-1 { transform: rotate(-60deg); }
-.option-2 { transform: rotate(0deg); }
-.option-3 { transform: rotate(60deg); }
-.option-4 { transform: rotate(120deg); }
-.option-5 { transform: rotate(180deg); }
-.option-6 { transform: rotate(240deg); }
