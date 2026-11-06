@@ -95,7 +95,7 @@ Failinimed
 ## Kuidas avada
 
 Ava `index.html` brauseris.
-Veebiversioon: [link]
+Veebiversioon: https://ta25.polluaar.itmajakas.ee/reisiloos/
 
 ## Reeglid tiimile
 
