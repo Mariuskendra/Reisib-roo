@@ -128,5 +128,7 @@ Veebiversioon: https://ta25.polluaar.itmajakas.ee/reisiloos/
 | [img/...] | [link või "loodud AI-ga, tööriist X"] |
 
 ## Teadaolevad puudused
-
-- [täidetakse viimasel päeval]
+- faili nimedes kasutatakse eesti keelt
+- Tegemist on prototüübiga 
+- Osad selgitavad tekstid on veel puudu
+- Praegune lahendusvarjantide vähesus tuleneb aja piirangust

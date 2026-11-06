@@ -26,4 +26,5 @@ spinButton.addEventListener("click", () => {
 
 wheel.addEventListener("transitionend", () => {
     spinButton.disabled = false;
+    window.location.href = "backpack.html?island=" + options[winningOption];
 });
