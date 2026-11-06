@@ -11,13 +11,13 @@ Palju õnne, sa võitsid reisi! Aga kuhu? Keeruta loosiratast, vaata, kuhu õnn 
 | Nimi | Rühm | Põhiülesanded |
 | :--- | :--- | :--- |
 | Marius Kendra | TAK-24 | JavaScript, planeerimine, GitHub |
-| Marko Põlluäär | TA-25 | JavaScript, planeerimine, GitHub, dokumentatsioon |
-| Kerdo Sepp | TAK-25 | HTML, CSS |
+| Marko Põlluäär | TA-25 | Planeerimine, GitHub, dokumentatsioon |
+| Kerdo Sepp | TAK-25 | JavaScript, HTML, CSS |
 | Reelika Brandt | TA-26 | HTML, CSS |
-| Eliin Elenor Viin | TAK-26 | HTML, CSS |
+| Eliis Elenor Viin | TAK-26 | HTML, CSS |
 | Martin Rosing | TA-26 | HTML, CSS |
 
-Idee ja sisuga (tekstid, saarte lood, pildid) tegelevad kõik.
+Idee ja sisuga (tekstid, saarte lood, pildid ja nende optimeerimine) tegelevad kõik.
 
 ## Kuidas see töötab
 
@@ -36,7 +36,6 @@ Pealkirjas on võidetud sihtkoht. Kasutaja valib riiulist seljakotti **kuni 5 es
 
 Valikus olevad esemed:
 
-| | | |
 | :--- | :--- | :--- |
 | veefilter | võrkkiik | kummipart |
 | wifi-ruuter | skafander (kosmoseülikond) | nuga |
@@ -62,9 +61,8 @@ Kokku on **9 tulemuslehte**.
 
 ## Failide struktuur
 
-Failinimed on ettepanek, täpsustame koos.
+Failinimed
 
-```
 /
 ├── README.md                  projekti kirjeldus (see fail)
 ├── index.html                 1. vaade: loosiratas
@@ -82,10 +80,12 @@ Failinimed on ettepanek, täpsustame koos.
 │
 ├── [mobiilivaate failid]      [täpsustada failinimed]
 │
-├── css/
-│   └── style.css              kogu kujundus
-├── js/
-│   └── app.js                 loosiratas, esemete valik, reeglid
+│── style.css                  kogu kujundus
+│
+│── app.js                     loosiratas, reeglid
+│── items.js                   esemete haldus
+│── backpack.js                esemete valiku loogika
+│    
 ├── img/                       pildid (esemed, taustad)
 └── docs/
     ├── ai-kasutamine.md       kus ja kuidas AI-d kasutasime
